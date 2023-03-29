@@ -1,0 +1,10 @@
+﻿@page
+@using Microsoft.Extensions.Options;
+@model IndexModel
+@inject IOptions<MySecretSettings> settings
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h2>My Secret Settings Value:</h2>
+<pre>@(settings.Value.MySecretValue ?? "_NULL_")</pre>
